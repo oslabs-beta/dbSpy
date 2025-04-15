@@ -8,10 +8,10 @@ import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 
-
 config();
 
-const port: number = Number(process.env.PORT) || 3000;
+// changed port '|| 3000' to 8080
+const port: number = Number(process.env.PORT) || 8080;
 
 const app: Express = express();
 //Set the payload limit size to 1mb when save a large database data which is TableData in featureTab.
@@ -33,12 +33,13 @@ app.use(
       httpOnly: true,
       path: '/',
       sameSite: true,
-      maxAge: 24 * 60 * 60 * 1000
+      maxAge: 24 * 60 * 60 * 1000,
     },
   })
 );
 
-app.listen(3000, () => {
+// changed port from 3000 to 8080
+app.listen(8080, '0.0.0.0', () => {
   log.info(`Securely Running at ${port}`);
   routes(app);
 });
