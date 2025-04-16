@@ -54,7 +54,6 @@ export default function Login() {
     const rootUrl: string = 'https://accounts.google.com/o/oauth2/v2/auth';
 
     const options: Options = {
-      // redirect_uri: 'https://dbspy.net/display',
       redirect_uri: 'http://localhost:8080/display/',
       client_id:
         '1050970973422-4am2mv6e621f83lggfcjubkl3hqtoj0k.apps.googleusercontent.com',
