@@ -49,12 +49,12 @@ export default function Login() {
   };
 
   // in development mode, change redirect_uri to 'http://localhost:8080/display/'
-  // in production mode, change redirect_uri back to 'http://db-spy.io/display/' before deploying
+  // in production mode, change redirect_uri back to 'https://dbspy.net/display' before deploying
   function getGoogle(): void {
     const rootUrl: string = 'https://accounts.google.com/o/oauth2/v2/auth';
 
     const options: Options = {
-      // redirect_uri: 'http://db-spy.io/display/',
+      // redirect_uri: 'https://dbspy.net/display',
       redirect_uri: 'http://localhost:8080/display/',
       client_id:
         '1050970973422-4am2mv6e621f83lggfcjubkl3hqtoj0k.apps.googleusercontent.com',
@@ -77,8 +77,7 @@ export default function Login() {
   const getGithub = (): void => {
     const rootUrl: string = 'https://github.com/login/oauth/authorize';
     const options: Options = {
-      // redirect_uri: 'http://db-spy.io/display/',
-      redirect_uri: 'https://dbspy.net/',
+      redirect_uri: 'https://dbspy.net/display',
       // TODO - figure out way to hide client_id, dotenv doesn't work in React components on FE
       client_id: 'Ov23lip6dXsoIJIInyHD',
       state: 'randomstring',
