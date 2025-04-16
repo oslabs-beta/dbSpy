@@ -39,7 +39,7 @@ app.use(
 );
 
 // changed port from 3000 to 8080
-app.listen(8080, '0.0.0.0', () => {
+app.listen(8080, () => {
   log.info(`Securely Running at ${port}`);
   routes(app);
 });
