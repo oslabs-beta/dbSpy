@@ -37,7 +37,7 @@ app.use(
   })
 );
 
-app.listen(3000, () => {
+app.listen(port, () => {
   log.info(`Securely Running at ${port}`);
   routes(app);
 });
