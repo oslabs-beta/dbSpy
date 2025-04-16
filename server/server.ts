@@ -10,8 +10,7 @@ import bodyParser from 'body-parser';
 
 config();
 
-// changed port '|| 3000' to 8080
-const port: number = Number(process.env.PORT) || 8080;
+const port: number = Number(process.env.PORT) || 3000;
 
 const app: Express = express();
 //Set the payload limit size to 1mb when save a large database data which is TableData in featureTab.
@@ -38,8 +37,7 @@ app.use(
   })
 );
 
-// changed port from 3000 to 8080
-app.listen(8080, () => {
+app.listen(3000, () => {
   log.info(`Securely Running at ${port}`);
   routes(app);
 });
